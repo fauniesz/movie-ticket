@@ -92,3 +92,20 @@ blockquote em {
 ul .times {
   padding-bottom: 10px;
 }
+
+/*Ticket Purchase Window*/
+
+#displaybox {
+    z-index: 10000;
+    /*opacity: 0.9;*/
+    background-color:#f9f9f9;
+    top:20%;
+    left:20%;
+    width:400px;
+    height:400px;
+    color: black;
+    text-align:center;
+    vertical-align:middle;
+    position: fixed;
+
+}
