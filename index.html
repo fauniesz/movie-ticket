@@ -72,26 +72,26 @@
           <tr>
             <td>
               <form id="purchase">
-                <label for="">Select Movie</label>
-                <select class="" name="">
-                 <option value="">Wonder Woman</option>
-                 <option value="">Despicable Me 3</option>
-                 <option value="">Guardians of the Galaxy 2</option>
-                 <option value="">Justice League</option>
+                <label for="movieName">Select Movie</label>
+                <select class="form-control" id="movieName">
+                 <option>Wonder Woman</option>
+                 <option>Despicable Me 3</option>
+                 <option>Guardians of the Galaxy 2</option>
+                 <option>Justice League</option>
                </select>
                 <br>
-                <label for="">Select Time</label>
-                <select class="" name="">
-                 <option value="true">2:45</option>
-                 <option value="false">6:15</option>
-                 <option value="false">9:00</option>
+                <label for="movieTime">Select Time</label>
+                <select class="form-control" id="movieTime">
+                 <option>2:45</option>
+                 <option>6:15</option>
+                 <option>9:00</option>
                </select>
                 <br>
-                <label for="">Select Ticket Type</label>
-                <select class="" name="">
-                 <option value="">Student</option>
-                 <option value="">Adult</option>
-                 <option value="">Senior</option>
+                <label for="viewerAge">Select Ticket Type</label>
+                <select class="form-control" id="viewerAge">
+                 <option>Student</option>
+                 <option>Adult</option>
+                 <option>Senior</option>
                </select>
                 <br>
                 <button type="button" name="button" id="addTicket">Add Another Ticket</button>
@@ -101,6 +101,16 @@
           </tr>
         </table>
       </div>
+
+      <div class="col-md-6">
+  <div id="show-ticket">
+    <h2></h2>
+
+    <p>Movie Title: <span class="movie"></span></p>
+    <p>Selected Age: <span class="age"></span></p>
+    <p>Selected Time: <span class="time"></span></p>
+  </div>
+</div>
     </div>
   </div>
 </body>
