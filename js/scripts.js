@@ -13,26 +13,26 @@ Ticket.prototype.finalPrice = function() {
 
 // user interface logic
 $(document).ready(function() {
-  $("#addTicket").click(function() {
-      $("#show-ticket").append('<div class="new-ticket">' +
-                                '<select class="form-control" id="movieName">' +
-                                '<option>Wonder Woman</option>' +
-                                '<option>Despicable Me 3</option>' +
-                                '<option>Guardians of the Galaxy 2</option>' +
-                                '<option>Justice League</option>' +
-                                '</select>' +
-                                '<select class="form-control" id="movieTime">' +
-                                '<option>2:45</option>' +
-                                '<option>6:15</option>' +
-                                '<option>9:00</option>' +
-                                '</select>' +
-                                '<select class="form-control" id="viewerAge">' +
-                                '<option>Student</option>' +
-                                '<option>Adult</option>' +
-                                '<option>Senior</option>' +
-                                '</select>' +
-                               '</div>');
-    });
+  // $("#addTicket").click(function() {
+  //     $("#show-ticket").append('<div class="new-ticket">' +
+  //                               '<select class="form-control" id="movieName">' +
+  //                               '<option>Wonder Woman</option>' +
+  //                               '<option>Despicable Me 3</option>' +
+  //                               '<option>Guardians of the Galaxy 2</option>' +
+  //                               '<option>Justice League</option>' +
+  //                               '</select>' +
+  //                               '<select class="form-control" id="movieTime">' +
+  //                               '<option>2:45</option>' +
+  //                               '<option>6:15</option>' +
+  //                               '<option>9:00</option>' +
+  //                               '</select>' +
+  //                               '<select class="form-control" id="viewerAge">' +
+  //                               '<option>Student</option>' +
+  //                               '<option>Adult</option>' +
+  //                               '<option>Senior</option>' +
+  //                               '</select>' +
+  //                              '</div>');
+  //   });
   $('#buyTickets').click(function (event) {
     event.preventDefault();
     var popUp = $('#displaybox');
@@ -51,13 +51,14 @@ $("form#purchase").submit(function(event) {
   var newTicket = new Ticket(inputtedMovieName, inputtedViewerAge, inputtedMovieTime);
   console.log(newTicket);
 
-  $("#addTicket").each(function() {
-      var inputtedMovieName = $(this).find("#movieName").val();
-      var inputtedViewerAge = $(this).find("#viewerAge").val();
-      var inputtedMovieTime = $(this).find("#movieTime").val();
-      var newTicket = new Ticket(inputtedMovieName, inputtedViewerAge, inputtedMovieTime);
-      newTicket.Ticket.push(newTicket);
-    });
+$("ul#tickets").append("<li><span class='viewTicket'>" + newTicket.finalPrice() + "</span></li>");
+  // $("#addTicket").each(function() {
+  //     var inputtedMovieName = $(this).find("#movieName").val();
+  //     var inputtedViewerAge = $(this).find("#viewerAge").val();
+  //     var inputtedMovieTime = $(this).find("#movieTime").val();
+  //     var newTicket = new Ticket(inputtedMovieName, inputtedViewerAge, inputtedMovieTime);
+  //     newTicket.Ticket.push(newTicket);
+  //   });
 });
 
 

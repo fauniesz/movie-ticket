@@ -109,3 +109,12 @@ ul .times {
     position: fixed;
 
 }
+
+#tickets {
+  list-style-type: none;
+  float: left;
+}
+
+/*#show-ticket p {
+  float: left;
+}*/
