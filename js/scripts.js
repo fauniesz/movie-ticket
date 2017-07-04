@@ -17,6 +17,9 @@ $(document).ready(function() {
     }
   });
 
-
+$("form#purchase").submit(function(event) {
+  event.preventDefault();
+  console.log("yay!");
+});
 
 });
